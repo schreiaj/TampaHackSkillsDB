@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bonnie</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+      <div id="bonnie"></div>
+      <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
+  <%= javascript_include_tag "application" %>
+  <script>
+    Backbone.history.start()
+  </script>
+</body>
+</html>
